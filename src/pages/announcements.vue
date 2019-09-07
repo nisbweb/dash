@@ -1,12 +1,12 @@
 <template>
-  <div class="announcements">
-    Announcements Page
+  <div class="dash">
+    Dash Page
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Announcements'
+  name: 'dash'
 }
 </script>
 

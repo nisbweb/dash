@@ -28,16 +28,16 @@
             @click="change_page('members')"
           >Members</a>
           <a
-            :class="{'navbar-item': true, 'is-active is-tab':current_page=='announcements'}"
-            @click="change_page('announcements')"
-          >Announcements</a>
+            :class="{'navbar-item': true, 'is-active is-tab':current_page=='dash'}"
+            @click="change_page('dash')"
+          >dash</a>
         </div>
       </div>
     </nav>
     <div class="main-container">
       <events v-show="current_page=='events'" :events_list="events" @reloadEvents="loadEvents"></events>
       <members v-show="current_page=='members'" :members_list="members" @reloadMembers="loadMembers"></members>
-      <announcements v-show="current_page=='announcements'"></announcements>
+      <dash v-show="current_page=='dash'"></dash>
     </div>
   </div>
 </template>
@@ -45,7 +45,7 @@
 <script>
 import Events from "./pages/events.vue";
 import Members from "./pages/members.vue";
-import Announcements from "./pages/announcements.vue";
+import dash from "./pages/dash.vue";
 import axios from 'axios';
 
 
@@ -54,7 +54,7 @@ export default {
   components: {
     Events,
     Members,
-    Announcements
+    dash
   },
   data() {
     return {
