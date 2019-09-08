@@ -1,5 +1,10 @@
 <template>
   <div class="events">
+
+    <div class="buttons is-centered">
+        <b-button type="is-link" tag="router-link" to="/addEvent"
+                >Add Event</b-button>
+    </div>
     <!-- {{events_list}} -->
 
     <div class="box" v-for="event in events_list" :key="event.id">
