@@ -5,6 +5,7 @@ import Events from './views/events.vue'
 import Members from './views/members.vue'
 import Notices from './views/notices.vue'
 import AddMember from './views/addMember.vue'
+import AddEvent from './views/addEvent.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/member/add',
       name: 'addMember',
       component: AddMember
+    },
+    {
+      path: '/event/add',
+      name: 'addEvent',
+      component: AddEvent
     },
     
   ]
